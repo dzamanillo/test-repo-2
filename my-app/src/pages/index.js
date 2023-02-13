@@ -13,6 +13,8 @@ export default function Home() {
 		setVariable(process.env.NEXT_PUBLIC_TEST);
 	}, []);
 
+	const btnClicked = () => alert("You clicked, good for you.");
+
 	return (
 		<>
 			<Head>
@@ -24,6 +26,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<h1>This is Test-Repo-2</h1>
 				<p>This is the stage branch</p>
+				<button onClick={() => btnClicked()}>Click Me</button>
 				<p>Connected</p>
 				{variable === "true" ? <p>It is true</p> : <p>It is false</p>}
 			</main>
